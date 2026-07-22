@@ -131,11 +131,58 @@
 
   button:focus-visible, input:focus-visible { outline: 2px solid var(--ida); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-  @media (max-width: 400px) {
-    .day-cell { min-height:52px; }
-    .toggle-sm { width:20px; height:20px; font-size:.58rem; }
-    .q-card .total { font-size: 1.25rem; }
+
+  /* --- Responsivo: pantallas grandes (desktop/tablet) --- */
+  @media (min-width: 720px) {
+    body { padding: 40px 16px 64px; }
+    .wrap { max-width: 680px; }
+    .hero h1 { font-size: 1.75rem; }
+    .day-cell { min-height: 70px; }
+    .toggle-sm { width: 26px; height: 26px; font-size: .68rem; }
   }
+
+  /* --- Responsivo: tablets / móviles medianos --- */
+  @media (max-width: 600px) {
+    body { padding: 20px 10px 48px; }
+    .hero h1 { font-size: 1.3rem; }
+    .hero .tagline { padding: 0 8px; font-size: .78rem; }
+    .route-line { flex-basis: 70px; }
+    .toolbar { flex-wrap: wrap; }
+    .toolbar button { min-width: 46%; }
+    .quincenas { grid-template-columns: 1fr; gap: 14px; }
+    .q-card::before, .q-card::after { display: none; }
+    .month-total { flex-wrap: wrap; gap: 8px; text-align: center; justify-content: center; }
+    .panel .row { flex-direction: column; align-items: stretch; }
+    .panel label { min-width: 0; }
+    .panel input[type="url"] { min-width: 0; width: 100%; }
+    .wa-buttons { flex-direction: column; align-items: stretch; }
+    .wa-btn { justify-content: center; }
+  }
+
+  /* --- Responsivo: móviles pequeños --- */
+  @media (max-width: 400px) {
+    body { padding: 16px 6px 44px; }
+    .hero h1 { font-size: 1.15rem; }
+    .nav .label { font-size: .88rem; }
+    .nav button { width: 32px; height: 32px; font-size: 1.1rem; }
+    th { font-size: .6rem; padding: 3px 1px; }
+    .day-cell { min-height:50px; padding: 4px 1px 5px; }
+    .day-num { font-size: .64rem; }
+    .toggle-sm { width:19px; height:19px; font-size:.55rem; }
+    .btn-row { gap: 2px; }
+    .q-card .total { font-size: 1.15rem; }
+    .q-card h3 { font-size: .62rem; }
+    .month-total .val { font-size: 1.2rem; }
+    .toast { font-size: .74rem; padding: 8px 12px; max-width: 92%; }
+  }
+
+  /* --- Pantallas muy angostas (ej. plegables o modo compacto) --- */
+  @media (max-width: 340px) {
+    .toggle-sm { width:17px; height:17px; font-size:.5rem; }
+    .day-cell { min-height:44px; }
+    th { font-size: .55rem; }
+  }
+
 
   #splash {
     position: fixed; inset: 0; background: #000; z-index: 9999;
@@ -290,7 +337,7 @@ function render() {
         <span class="route-point">🏢<em>Trabajo</em></span>
       </div>
       <h1>Control de Expresos</h1>
-      <p class="tagline">Cada ida y cada vuelta, sumadas por quincena</p>
+      <p class="tagline">Cada ida y cada vuelta con tu hermana, sumadas por quincena</p>
     </div>
 
     <div class="toolbar">
