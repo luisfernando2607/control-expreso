@@ -9,6 +9,10 @@
 ![Google Apps Script](https://img.shields.io/badge/Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Google Sheets](https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)
 
+<a href="https://luisfernando2607.github.io/control-expreso/"><img src="https://img.shields.io/badge/▶_Ver_demo_en_vivo-6C63FF?style=for-the-badge" alt="Demo en vivo"/></a>
+
+<img src="docs/demo.png" alt="Calendario de viajes por mes" width="90%"/>
+
 </div>
 
 ---
